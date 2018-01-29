@@ -1,0 +1,30 @@
+{
+  "name": "age-of-reason",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/js/src/demo.js",
+    "clean": "bsb -clean-world",
+    "build": "bsb -make-world",
+    "watch":
+      "concurrently -k -n bsb,jest -c magenta,green \"bsb -make-world -w\" \"jest --watch\" ",
+    "byte": "bsb -backend",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miage-lille/age-of-reason.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miage-lille/age-of-reason/issues"
+  },
+  "homepage": "https://github.com/miage-lille/age-of-reason#readme",
+  "devDependencies": {
+    "@glennsl/bs-jest": "^0.3.3",
+    "bs-platform": "^2.1.0",
+    "concurrently": "^3.5.1"
+  }
+}
