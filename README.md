@@ -1,4 +1,4 @@
-#Age of Reason
+# Age of Reason
 
 In previous training we defined code easy to reason about as :
 

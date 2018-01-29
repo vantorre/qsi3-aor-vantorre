@@ -21,7 +21,8 @@ A tennis match consists of multiple sets that again are played as several games,
 * If the player with advantage wins the ball, (s)he wins the game.
 * If the player without advantage wins, they are back at deuce.
 
-This problem is easy enough that it's fun to play with, but difficult enough that it's fun to play with. (∩ ｀-´)⊃━☆ﾟ.\*･｡ﾟ
+This problem is easy enough that it's fun to play with, but difficult enough that it's fun to play with.
+<br/>(∩ ｀-´)⊃━☆ﾟ.\*･｡ﾟ
 
 ### Players
 

@@ -1,12 +1,14 @@
 {
-  "name": "module-bot",
+  "name": "age-of-reason",
   "version": "0.1.0",
+  "reason": { "react-jsx": 2 },
   "bsc-flags": ["-bs-super-errors"],
   "package-specs": {
     "module": "commonjs",
     "in-source": true
   },
   "suffix": ".bs.js",
+  "namespace": true,
   "sources": [
     {
       "dir": "src"
@@ -16,6 +18,6 @@
       "type": "dev"
     }
   ],
-  "bs-dev-dependencies": ["@glennsl/bs-jest"],
+  "bs-dev-dependencies": ["@glennsl/bs-jest", "reason-react"],
   "refmt": 3
 }
