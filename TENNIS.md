@@ -416,6 +416,13 @@ Add a test for points :
     expect(scoreWhenPoints(loveFifteen, other(PlayerOne)))
     |> toEqual(Points(loveThirty));
   });
+  test(
+    "Given player: 30 | other : 15 when player wins then score is 40/15", () => {
+    let thirtyFifteen = {playerOne: Thirty, playerTwo: Fifteen};
+    let fortyFifteen = {player: PlayerOne, otherPlayerPoint: Fifteen};
+    expect(scoreWhenPoints(thirtyFifteen, PlayerOne))
+    |> toEqual(Forty(fortyFifteen));
+  });
 ```
 
 Iterate our implementation :
@@ -434,10 +441,13 @@ let pointFor = (player, current) =>
   };
 
 let scoreWhenPoints = (current, winner) =>
-  /* |> pipe params to right */
   switch (current |> pointFor(winner) |> incrementPoint) {
   | Some(np) => Points(pointTo(winner, np, current))
-  | None => Deuce
+  | None =>
+    Forty({
+      player: winner,
+      otherPlayerPoint: current |> pointFor(other(winner))
+    })
   };
 ```
 
