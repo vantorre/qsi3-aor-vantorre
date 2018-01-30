@@ -10,8 +10,8 @@ In previous training we defined code easy to reason about as :
 ## Goals of this training
 
 * How a statically typed language with functional programming pattern could help ?
-* XXX ?
-* XXX
+* How Type Driven Design and Test Driven Development could secure developments ?
+* Discovery of Reason and Reason-React
 
 ## Meet ReasonML
 
