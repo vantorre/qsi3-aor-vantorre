@@ -49,7 +49,7 @@ let p : point = 15;
 let p : point = 30;
 ```
 
-It looks good so far, but how do you model love? It's not really an integer. Still, both players start with love, so it's intuitive to try to model love as 0 ...It's a hack, but it works. But you illegal values are not unrepresentable :
+It looks good so far, but how do you model love? It's not really an integer. Still, both players start with love, so it's intuitive to try to model love as 0 ...It's a hack, but it works. But your illegal values are not unrepresentable :
 
 ```Ocaml
 let p : point = 1000;
@@ -135,7 +135,7 @@ type fortyData = {
 };
 ```
 
-For instance, this value indicates that PlayerOne has forty points, and PlayerOne has Love :
+For instance, this value indicates that PlayerOne has forty points, and PlayerTwo has Love :
 
 ```OCaml
 let fd : fortyData = {player: PlayerOne, otherPlayerPoint: Love};
