@@ -7,9 +7,9 @@
     "start": "node lib/js/src/demo.js",
     "clean": "bsb -clean-world",
     "build": "bsb -make-world",
-    "watch": "concurrently -k -n bsb,jest -c magenta,green \"bsb -make-world -w\" \"jest --watch\" ",
+    "watch": "concurrently -k -n bsb,jest,webpack -c magenta,green,grey \"bsb -make-world -w\" \"jest --watch\" \"webpack --mode development -w\" ",
     "byte": "bsb -backend",
-    "bundle:dev": "webpack --mode development -w",
+    "bundle:dev": "webpack --mode development",
     "bundle": "webpack --mode production",
     "test": "jest --coverage"
   },

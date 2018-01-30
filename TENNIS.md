@@ -488,5 +488,8 @@ Finally you can initialize a new Game :
 ```Ocaml
 let newGame = Points({playerOne: Love, playerTwo: Love});
 ```
+## Exercice
+
+Develop 3 functions : `string_of_player`, `string_of_point`, `string_of_score` that return string from a data of type player, point or score.
 
 Now we have a tennis API, we will implement a [counter UI](./COUNTER.md)

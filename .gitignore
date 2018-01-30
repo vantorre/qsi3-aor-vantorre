@@ -4,3 +4,5 @@ coverage
 .DS_Store
 .merlin
 .bsb.lock
+dist
+*.bs.js

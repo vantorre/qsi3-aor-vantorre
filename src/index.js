@@ -1,1 +1,1 @@
-require('./index.bs.js');
+require('./app.bs.js');

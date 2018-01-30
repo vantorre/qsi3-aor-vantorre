@@ -89,4 +89,22 @@ let score = (current, winner) =>
   };
 
 let newGame = Points({playerOne: Love, playerTwo: Love});
-/* fin */
+
+let string_of_player = player => switch player {
+| PlayerOne => "Player 1"
+| PlayerTwo=> "Player 2"
+};
+
+let string_of_point = p => switch p {
+  | Love => "Love"
+  | Fifteen => "Fifteen"
+  | Thirty => "Thirty";
+};
+
+let string_of_score = current => switch current {
+| Points(p) => string_of_point(p.playerOne) ++ " / " ++ string_of_point(p.playerTwo) 
+| Deuce => "Deuce"
+| Game(g) => "Game" ++ string_of_player(g)
+| Advantage(a) => "Advantage" ++ string_of_player(a)
+| Forty(f) => (f.player == PlayerOne) ? "40 / " ++ string_of_point(f.otherPlayerPoint) : string_of_point(f.otherPlayerPoint) ++ " / 40"
+};

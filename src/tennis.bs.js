@@ -109,6 +109,51 @@ function score(current, winner) {
   }
 }
 
+function string_of_player(player) {
+  if (player !== 0) {
+    return "Player 2";
+  } else {
+    return "Player 1";
+  }
+}
+
+function string_of_point(p) {
+  switch (p) {
+    case 0 : 
+        return "Love";
+    case 1 : 
+        return "Fifteen";
+    case 2 : 
+        return "Thirty";
+    
+  }
+}
+
+function string_of_score(current) {
+  if (typeof current === "number") {
+    return "Deuce";
+  } else {
+    switch (current.tag | 0) {
+      case 0 : 
+          var p = current[0];
+          return string_of_point(p[/* playerOne */0]) + (" / " + string_of_point(p[/* playerTwo */1]));
+      case 1 : 
+          var f = current[0];
+          var match = +(f[/* player */0] === /* PlayerOne */0);
+          if (match !== 0) {
+            return "40 / " + string_of_point(f[/* otherPlayerPoint */1]);
+          } else {
+            return string_of_point(f[/* otherPlayerPoint */1]) + " / 40";
+          }
+      case 2 : 
+          return "Advantage" + string_of_player(current[0]);
+      case 3 : 
+          return "Game" + string_of_player(current[0]);
+      
+    }
+  }
+}
+
 var newGame = /* Points */Block.__(0, [/* record */[
       /* playerOne : Love */0,
       /* playerTwo : Love */0
@@ -125,4 +170,7 @@ exports.scoreWhenPoints    = scoreWhenPoints;
 exports.scoreWhenGame      = scoreWhenGame;
 exports.score              = score;
 exports.newGame            = newGame;
+exports.string_of_player   = string_of_player;
+exports.string_of_point    = string_of_point;
+exports.string_of_score    = string_of_score;
 /* No side effect */
