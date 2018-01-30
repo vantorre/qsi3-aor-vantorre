@@ -21,7 +21,8 @@ A tennis match consists of multiple sets that again are played as several games,
 * If the player with advantage wins the ball, (s)he wins the game.
 * If the player without advantage wins, they are back at deuce.
 
-This problem is easy enough that it's fun to play with, but difficult enough that it's fun to play with. (∩ ｀-´)⊃━☆ﾟ.\*･｡ﾟ
+This problem is easy enough that it's fun to play with, but difficult enough that it's fun to play with.
+<br/>(∩ ｀-´)⊃━☆ﾟ.\*･｡ﾟ
 
 ### Players
 
@@ -487,5 +488,8 @@ Finally you can initialize a new Game :
 ```Ocaml
 let newGame = Points({playerOne: Love, playerTwo: Love});
 ```
+## Exercice
+
+Develop 3 functions : `string_of_player`, `string_of_point`, `string_of_score` that return string from a data of type player, point or score.
 
 Now we have a tennis API, we will implement a [counter UI](./COUNTER.md)
