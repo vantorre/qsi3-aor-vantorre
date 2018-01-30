@@ -1,6 +1,6 @@
 # Tennis Kata
 
-_This Kata is an adaptation to ReasonML of [Mark Seeman's serie of articles about property-based testing](http://blog.ploeh.dk/2016/02/10/types-properties-software/). Most of his article's exemples are un F#. I highly recommand the reading of his blog if you're interested by functional programming._
+_This Kata is an adaptation to ReasonML of [Mark Seeman's serie of articles about property-based testing](http://blog.ploeh.dk/2016/02/10/types-properties-software/). Most of his article's exemples are in F#. I highly recommand the reading of his blog if you're interested by functional programming._
 
 ## About type systems
 
