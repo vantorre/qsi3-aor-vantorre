@@ -14,15 +14,15 @@ We will illustrate it by the [Tennis Kata](http://codingdojo.org/kata/Tennis/).
 
 A tennis match consists of multiple sets that again are played as several games, in the kata, you only have to implement the scoring system for a single game:
 
-* Each player can have either of these points in one game: Love, 15, 30, 40.
-* If you have 40 and you win the ball, you win the game. There are, however, special rules.
-* If both have 40, the players are deuce.
-* If the game is in deuce, the winner of a ball will have advantage and game ball.
-* If the player with advantage wins the ball, (s)he wins the game.
-* If the player without advantage wins, they are back at deuce.
+- Each player can have either of these points in one game: Love, 15, 30, 40.
+- If you have 40 and you win the ball, you win the game. There are, however, special rules.
+- If both have 40, the players are deuce.
+- If the game is in deuce, the winner of a ball will have advantage and game ball.
+- If the player with advantage wins the ball, (s)he wins the game.
+- If the player without advantage wins, they are back at deuce.
 
 This problem is easy enough that it's fun to play with, but difficult enough that it's fun to play with.
-<br/>(∩ ｀-´)⊃━☆ﾟ.\*･｡ﾟ
+<br/>(∩ ｀-´)⊃━☆ ﾟ.\*･｡ﾟ
 
 ### Players
 
@@ -121,10 +121,10 @@ type pointsData = {
 
 While this enables you to keep track of the score when both players have less than forty points, the following phases of a game still remain:
 
-* One of the players have forty points.
-* Deuce.
-* Advantage to one of the players.
-* One of the players won the game.
+- One of the players have forty points.
+- Deuce.
+- Advantage to one of the players.
+- One of the players won the game.
 
 You can design the first of these with another record type:
 
@@ -183,20 +183,11 @@ These types govern what can be stated in the domain, but they don't provide any 
 
 From this point, you should work localy :
 
-1. Install ReasonML :
+1. Clone this repository
 
-```OCaml
-#OSX
-npm install -g https://github.com/reasonml/reason-cli/archive/3.0.4-bin-darwin.tar.gz
-#Linux
-npm install -g https://github.com/reasonml/reason-cli/archive/3.0.4-bin-linux.tar.gz
-```
+1. Install ReasonML through bs-platform : `npm install --save-dev bs-platform`
 
-For Windows, read [those instructions](https://github.com/reasonml/reasonml.github.io/issues/195)
-
-2. Install [ReasonML plugin ](https://reasonml.github.io/docs/en/editor-plugins.html) for your IDE
-
-3. Clone your git repository and run `npm install` this will install [buckelscript](https://bucklescript.github.io/v) which we use as a toolchain for compiling ReasonML to JS and interop with JS in ReasonML.
+1. Install [ReasonML plugin ](https://reasonml.github.io/docs/en/editor-plugins.html) for your IDE
 
 Then you can run :
 
@@ -312,9 +303,9 @@ Now the test pass ! (•̀ᴗ•́)و
 
 When one of the players have forty points, there are three possible outcomes of the next ball:
 
-* If the player with forty points wins the ball, (s)he wins the game.
-* If the other player has thirty points, and wins the ball, the score is deuce.
-* If the other player has less than thirty points, and wins the ball, his or her points increases to the next level (from love to fifteen, or from fifteen to thirty).
+- If the player with forty points wins the ball, (s)he wins the game.
+- If the other player has thirty points, and wins the ball, the score is deuce.
+- If the other player has less than thirty points, and wins the ball, his or her points increases to the next level (from love to fifteen, or from fifteen to thirty).
 
 The first property is the easiest :
 
@@ -397,7 +388,7 @@ let scoreWhenForty = (current, winner) =>
     );
 ```
 
-Now the test pass ! (ﾉ◕ ヮ ◕)ﾉ\*:・ﾟ✧
+Now the test pass ! (ﾉ ◕ ヮ ◕)ﾉ\*:・ﾟ ✧
 
 #### Points
 
@@ -452,17 +443,17 @@ let scoreWhenPoints = (current, winner) =>
   };
 ```
 
-Now the test pass ! (ﾉ◕ ヮ ◕)ﾉ\*:・ﾟ✧
+Now the test pass ! (ﾉ ◕ ヮ ◕)ﾉ\*:・ﾟ ✧
 
 ### Composing the general function
 
 What you need to implement is a state transition of the type `(Score, Player ) => Score`.
 <br/>What you have so far are the following functions:
 
-* scoreWhenPoints : `(PointsData, Player) => Score`
-* scoreWhenForty : `(FortyData, Player) => Score`
-* scoreWhenDeuce : `(Player) => Score`
-* scoreWhenAdvantage : `(Player, Player) -> Score`
+- scoreWhenPoints : `(PointsData, Player) => Score`
+- scoreWhenForty : `(FortyData, Player) => Score`
+- scoreWhenDeuce : `(Player) => Score`
+- scoreWhenAdvantage : `(Player, Player) -> Score`
 
 You can implement the desired function by clicking the pieces together:
 
@@ -488,8 +479,7 @@ Finally you can initialize a new Game :
 ```Ocaml
 let newGame = Points({playerOne: Love, playerTwo: Love});
 ```
+
 ## Exercice
 
 Develop 3 functions : `string_of_player`, `string_of_point`, `string_of_score` that return string from a data of type player, point or score.
-
-Now we have a tennis API, we will implement a [counter UI](./COUNTER.md)

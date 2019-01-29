@@ -4,13 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node lib/js/src/demo.js",
+    "start": "node src/tennis.bs.js",
     "clean": "bsb -clean-world",
     "build": "bsb -make-world",
-    "watch": "concurrently -k -n bsb,jest,webpack -c magenta,green,grey \"bsb -make-world -w\" \"jest --watch\" \"webpack --mode development -w\" ",
+    "watch": "concurrently -k -n bsb,jest -c magenta,green \"bsb -make-world -w\" \"jest --watch\"",
     "byte": "bsb -backend",
-    "bundle:dev": "webpack --mode development",
-    "bundle": "webpack --mode production",
     "test": "jest --coverage"
   },
   "repository": {
@@ -24,17 +22,8 @@
   },
   "homepage": "https://github.com/miage-lille/age-of-reason#readme",
   "devDependencies": {
-    "@glennsl/bs-jest": "^0.3.3",
-    "bs-platform": "^2.1.0",
-    "concurrently": "^3.5.1",
-    "schema-utils": "^0.4.3",
-    "uglifyjs-webpack-plugin": "^1.1.6",
-    "webpack": "^4.0.0-beta.0",
-    "webpack-cli": "^2.0.4"
-  },
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "reason-react": "^0.3.1"
+    "@glennsl/bs-jest": "^0.4.7",
+    "bs-platform": "^4.0.18",
+    "concurrently": "^4.1.0"
   }
 }
