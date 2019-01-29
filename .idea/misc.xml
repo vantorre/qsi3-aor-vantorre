@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../test-play/cara-play-tuto-parties/cara-play-partie1" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../test-play/cara-play-tutorial" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="ScalaSbtSettings">
+    <option name="customVMEnabled" value="true" />
+    <option name="customVMPath" value="$USER_HOME$/Install/java/jdk-8u161-linux-x64/jdk1.8.0_161" />
+  </component>
+</project>
